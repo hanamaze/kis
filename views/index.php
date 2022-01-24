@@ -198,6 +198,7 @@ desired effect
 		<?php if($konten == "job_harian/job_harian_list"){ echo "JOB HARIAN"; } ?>
     <?php if($konten == "kategori_pelatihan/kategori_pelatihan_list"){ echo "PERPANJANGAN"; } ?>
     <?php if($konten == "nomor_iso/nomor_iso_list"){ echo "NOMOR ISO"; } ?>
+    <?php if($konten == "nomor_smk3/nomor_smk3_list"){ echo "NOMOR SMK3"; } ?>
     <?php if($konten == "email_karyawan/email_karyawan_list"){ echo "EMAIL KARYAWAN"; } ?>
     <?php if($konten == "setting/setting_list"){ echo "SETTING"; } ?>
     <?php if($konten == "pelatihan/pelatihan_list"){ echo "PELATIHAN"; } ?>
@@ -1094,6 +1095,33 @@ if($date=="13-08"){
                 e.preventDefault();
                 $("#myModal").modal('show');
                 $.post('<?php echo base_url('nomor_iso/create/');?>',
+                    {id:$(this).attr('data-id')},
+                    function(html){
+                        $(".modal-body").html(html);
+                    }   
+                );
+            });
+        });
+
+
+        
+		$(function(){
+            $(document).on('click','.detail-nomor_smk3',function(e){
+                e.preventDefault();
+                $("#myModal").modal('show');
+                $.post('<?php echo base_url('nomor_smk3/read/');?>',
+                    {id:$(this).attr('data-id')},
+                    function(html){
+                        $(".modal-body").html(html);
+                    }   
+                );
+            });
+        });
+        $(function(){
+            $(document).on('click','.create-nomor_smk3',function(e){
+                e.preventDefault();
+                $("#myModal").modal('show');
+                $.post('<?php echo base_url('nomor_smk3/create/');?>',
                     {id:$(this).attr('data-id')},
                     function(html){
                         $(".modal-body").html(html);

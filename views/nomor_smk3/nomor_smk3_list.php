@@ -1,13 +1,17 @@
 <!doctype html>
 <html>
     <head>
-        <title>ISO KIS</title>
+        <title>SMK3 KIS</title>
         <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
-
+        <style>
+            body{
+                padding: 0px;
+            }
+        </style>
     </head>
     <body>
-	<!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+       <!-- Modal -->
+       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -23,11 +27,13 @@
                 </div>
             </div>
         </div>
-		
-		<a href="#" class="create-nomor_iso btn btn-primary">Tambah</a>
+		<!-- Modal END -->
+
+<!-- BUTTON TAMBAH MODAL - POPUP -->
+		<a href="#" class="create-nomor_smk3 btn btn-primary">Tambah</a>
 		<div class="box">
             <div class="box-header">
-              <h3 class="box-title">Penomoran ISO</h3>
+              <h3 class="box-title">Penomoran SMK3</h3>
               
             </div>
             <!-- /.box-header -->
@@ -36,42 +42,43 @@
         <table id="example2" class="table table-bordered table-striped">
             <thead>
 			<tr>
-         <th>No</th>
-		<th>Tanggal Issued</th>
+                <th>No</th>
 		<th>Nama Perusahaan</th>
-		<th>No Audit</th>
-		<th>Jenis ISO</th>
+		<th>No Laporan</th>
+		<th>No Aplikasi</th>
+		<th>No Ska</th>
+		<th>Tgl Audit</th>
 		<th>Pembawa</th>
-        
-        <th>Action</th>
-            </tr>
+		<th>Ket</th>
+		<th>Action</th>
+        </tr>
 			</thead>
 			<tbody>
 			<?php
-            foreach ($nomor_iso_data as $nomor_iso)
-            
+            foreach ($nomor_smk3_data as $nomor_smk3)
             {
                 ?>
                 <tr>
-			<td><?php echo ++$start ?></td>
-            <td><?php echo $nomor_iso->tgl_issued ?></td>
-			<td><?php echo $nomor_iso->nama_perusahaan ?></td>
-			<td><?php echo $nomor_iso->no_audit ?></td>
-			<td><?php echo $nomor_iso->jenis_iso ?></td>
-			<td><?php echo $nomor_iso->pembawa ?></td>
+			<td width="80px"><?php echo ++$start ?></td>
+			<td><?php echo $nomor_smk3->nama_perusahaan ?></td>
+			<td><?php echo $nomor_smk3->no_laporan ?></td>
+			<td><?php echo $nomor_smk3->no_aplikasi ?></td>
+			<td><?php echo $nomor_smk3->no_ska ?></td>
+			<td><?php echo $nomor_smk3->tgl_audit ?></td>
+			<td><?php echo $nomor_smk3->pembawa ?></td>
 			
-			
+
 			<td style="text-align:center" width="200px">
-			<a href="#" class="btn btn-primary detail-nomor_iso" data-id="<?php echo $nomor_iso->id_nomoriso; ?>">
+			<a href="#" class="btn btn-primary detail-nomor_smk3" data-id="<?php echo $nomor_smk3->id_nomorsmk3; ?>">
 			<span class="fa fa-list-ul"></span>
 			</a>
 			
 			
 				<?php if($this->session->userdata('status')=="admin" or $this->session->userdata('status')=="hrd"){?>	
-				 <a href="nomor_iso/update/<?php echo $nomor_iso->id_nomoriso;?>" class="btn btn-success">
+				 <a href="nomor_smk3/update/<?php echo $nomor_smk3->id_nomorsmk3;?>" class="btn btn-success">
 				 <span class="fa fa-pencil"></span>
 				 </a>
-				 <a onclick="javasciprt: return confirm('Yakin Menghapus ?')" href="nomor_iso/delete/<?php echo $nomor_iso->id_nomoriso;?>" class="btn btn-danger">
+				 <a onclick="javasciprt: return confirm('Yakin Menghapus ?')" href="nomor_smk3/delete/<?php echo $nomor_smk3->id_nomorsmk3;?>" class="btn btn-danger">
 				 <span class="fa fa-trash-o"></span>
 				 </a>
 				<?php } ?>
