@@ -49,7 +49,7 @@
 		<th>No Ska</th>
 		<th>Tgl Audit</th>
 		<th>Pembawa</th>
-		<th>Ket</th>
+		
 		<th>Action</th>
         </tr>
 			</thead>

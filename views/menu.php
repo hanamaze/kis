@@ -161,7 +161,7 @@
     
         <li <?php if($konten == "nomor_smk3/nomor_smk3_list"){ echo "class='active'"; } ?>>
           <a href="<?php echo base_url();?>nomor_smk3">
-            <i class="fa fa-gear"></i>
+            <i class="fa fa-bookmark"></i>
             
             <span>Nomor SMK3</span>
           </a>
