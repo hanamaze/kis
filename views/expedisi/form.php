@@ -32,7 +32,7 @@
             <input type="text-area" class="form-control" name="resi" id="resi" placeholder="Resi" />
         </div>
 	    <div class="form-group">
-            <label for="varchar">Tanggal </label>
+            <label for="varchar">Tanggalan </label>
             <input type="text" class="form-control tanggal" name="tanggal" id="tanggal" placeholder="Tanggal" />
         </div>
 	    <div class="form-group">

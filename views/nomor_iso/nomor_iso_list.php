@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>KIS</title>
+        <title>ISO KIS</title>
         <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
 
     </head>
@@ -28,6 +28,7 @@
 		<div class="box">
             <div class="box-header">
               <h3 class="box-title">Penomoran ISO</h3>
+              <h4 class="box-title">Sesuaikan dengan Buku </h4>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -41,7 +42,7 @@
 		<th>No Audit</th>
 		<th>Jenis ISO</th>
 		<th>Pembawa</th>
-        <th>Ket</th>
+        
         <th>Action</th>
             </tr>
 			</thead>
@@ -58,7 +59,7 @@
 			<td><?php echo $nomor_iso->no_audit ?></td>
 			<td><?php echo $nomor_iso->jenis_iso ?></td>
 			<td><?php echo $nomor_iso->pembawa ?></td>
-			<td><?php echo $nomor_iso->ket ?></td>
+			
 			
 			<td style="text-align:center" width="200px">
 			<a href="#" class="btn btn-primary detail-nomor_iso" data-id="<?php echo $nomor_iso->id_nomoriso; ?>">

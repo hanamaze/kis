@@ -146,14 +146,15 @@
         <?php } ?>
 		<li <?php if($konten == "pelatihan/pelatihan_list"){ echo "class='active'"; } ?>>
           <a href="<?php echo base_url();?>pelatihan">
-            <i class="fa fa-child"></i>
+          <i class="fa fa-child"></i>
             <span>Pelatihan</span>
           </a>
         </li>
 
         <li <?php if($konten == "nomor_iso/nomor_iso_list"){ echo "class='active'"; } ?>>
           <a href="<?php echo base_url();?>nomor_iso">
-            <i class="fa fa-child"></i>
+            <i class="fa fa-book"></i>
+            
             <span>Nomor ISO</span>
           </a>
         </li>

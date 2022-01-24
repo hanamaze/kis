@@ -3,11 +3,10 @@
     <head>
         <title>harviacode.com - codeigniter crud generator</title>
         <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
-
+        
         <style>
             body{
-                padding: 15px;
+                padding: 0px;
             }
         </style>
     </head>
@@ -16,7 +15,7 @@
         <form action="<?php echo $action; ?>" method="post">
 	    <div class="form-group">
             <label for="varchar">Tgl Issued <?php echo form_error('tgl_issued') ?></label>
-            <input type="text" class="form-control" name="tgl_issued" id="tgl_issued" placeholder="Tgl Issued" value="<?php echo $tgl_issued; ?>" />
+            <input type="text" class="form-control tgl_issued" name="tgl_issued" id="tgl_issued" placeholder="Tgl Issued" value="<?php echo $tgl_issued; ?>" />
         </div>
 	    <div class="form-group">
             <label for="varchar">Nama Perusahaan <?php echo form_error('nama_perusahaan') ?></label>
@@ -29,13 +28,9 @@
 	    
       
         <div class="form-group">
-    <label><b> Pilih ISO : </b></label><br>
-    <input type="checkbox" name="jenis_iso[]" value="9001" > 9001
-    
-             <input type="checkbox" name="jenis_iso[]" value="14001" > 14001
-             <input type="checkbox" name="jenis_iso[]" value="45001" > 18001
-             <input type="checkbox" name="jenis_iso[]" value="22000" > 22000
-
+            <label for="varchar">Jenis ISO <?php echo form_error('jenis_iso') ?></label>
+            <input type="text" class="form-control" name="jenis_iso" id="jenis_iso" placeholder="Jenis ISO" value="<?php echo $jenis_iso; ?>" />
+        </div>
 
              <div class="form-group">
             <label for="varchar">Pembawa <?php echo form_error('pembawa') ?></label>
@@ -43,7 +38,7 @@
         </div>
 	    <div class="form-group">
             <label for="varchar">Ket <?php echo form_error('ket') ?></label>
-            <input type="text" class="form-control" name="ket" id="ket" placeholder="Ket" value="<?php echo $ket; ?>" />
+            <textarea class="form-control" id="ket" name="ket" placeholder="Keterangan" rows="3" ><?php echo $ket; ?></textarea>
         </div>
 	    <input type="hidden" name="id_nomoriso" value="<?php echo $id_nomoriso; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
