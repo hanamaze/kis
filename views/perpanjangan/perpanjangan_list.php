@@ -66,7 +66,7 @@ $user = $this->db->query("SELECT * FROM user WHERE id_user='$id'")->row();  ?>
                 ?>
                 <tr>
 			<td><?php echo $start++ ?></td>
-			<td><?php echo $perpanjangan->nama_peserta."<br><span class='badge bg-green'>".strtoupper($perpanjangan->status)."</span>"; ?></td>
+			<td><?php echo $perpanjangan->nama_peserta."<br><span class='label label-success'>".strtoupper($perpanjangan->status)."</span>"; ?></td>
 			<td><?php echo $perpanjangan->perusahaan; ?></td>
 			<td><?php echo $perpanjangan->tgl_submit; ?></td>
             <td ><?php echo $perpanjangan->keterangan; ?></td>

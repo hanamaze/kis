@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>harviacode.com - codeigniter crud generator</title>
+        <title>Nomor ISO</title>
         <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
         <style>
             body{
@@ -10,7 +10,7 @@
         </style>
     </head>
     <body>
-        <h2 style="margin-top:0px">Nomor_iso Read</h2>
+        <h2 style="margin-top:0px">Penomoran ISO</h2>
         <table class="table">
 	    <tr><td>Tgl Issued</td><td><?php echo $tgl_issued; ?></td></tr>
 	    <tr><td>Nama Perusahaan</td><td><?php echo $nama_perusahaan; ?></td></tr>
