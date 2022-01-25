@@ -75,12 +75,20 @@
             <input type="text" class="form-control" name="no_ptsa" id="no_ptsa" placeholder="No Ptsa" value="<?php echo $no_ptsa; ?>" />
         </div>
 		<div class="form-group">
-            <label for="varchar"> Status <?php echo form_error('status') ?></label>
-            <input type="text" class="form-control" name="status" id="status" placeholder="Status" value="<?php echo $status; ?>" />
+            <label for="enum">Status <?php echo form_error('status') ?></label>
+            <select name="status" class="form-control">
+    <option value="input" <?php if($status=="input"){ echo "selected"; }?>>INPUT</option>
+    <option value="submit" <?php if($status=="submit"){ echo "selected"; }?>>SUBMIT</option>
+    <option value="ptsa" <?php if($status=="ptsa"){ echo "selected"; }?>>PTSA</option>
+    <option value="cetak" <?php if($status=="cetak"){ echo "selected"; }?>>CETAK</option>
+    <option value="selesai" <?php if($status=="selesai"){ echo "selected"; }?>>SELESAI</option>
+    
+        </select>
         </div>
 		<div class="form-group">
             <label for="varchar"> Keterangan <?php echo form_error('keterangan') ?></label>
-            <input type="text" class="form-control" name="keterangan" id="keterangan" placeholder="Keterangan" value="<?php echo $keterangan; ?>" />
+            <textarea class="form-control" id="keterangan" name="keterangan" placeholder="Keterangan" rows="3" ><?php echo $keterangan; ?></textarea>
+
         </div>
 		
 	    <input type="hidden" name="id_perpanjangan" value="<?php echo $id_perpanjangan; ?>" /> 
