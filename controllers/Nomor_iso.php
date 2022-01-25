@@ -28,7 +28,8 @@ class Nomor_iso extends CI_Controller
         $config['per_page'] = 10;
         $config['page_query_string'] = TRUE;
         $config['total_rows'] = $this->Nomor_iso_model->total_rows($q);
-        $nomor_iso = $this->Nomor_iso_model->get_limit_data($config['per_page'], $start, $q);
+        //$nomor_iso = $this->Nomor_iso_model->get_limit_data($config['per_page'], $start, $q);
+        $nomor_iso = $this->Nomor_iso_model->get_all();
 
         $this->load->library('pagination');
         $this->pagination->initialize($config);

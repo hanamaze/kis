@@ -28,8 +28,10 @@ class Nomor_smk3 extends CI_Controller
         $config['per_page'] = 10;
         $config['page_query_string'] = TRUE;
         $config['total_rows'] = $this->Nomor_smk3_model->total_rows($q);
-        $nomor_smk3 = $this->Nomor_smk3_model->get_limit_data($config['per_page'], $start, $q);
-
+        
+        //bawaan harvia - page number
+        //$nomor_smk3 = $this->Nomor_smk3_model->get_limit_data($config['per_page'], $start, $q);
+        $nomor_smk3 = $this->Nomor_smk3_model->get_all();
         $this->load->library('pagination');
         $this->pagination->initialize($config);
 
