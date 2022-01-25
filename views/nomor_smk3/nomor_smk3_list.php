@@ -91,8 +91,8 @@
         </table>
 		<div class="row">
             <div class="col-md-6">
-			<?php // echo anchor(site_url('nomor_iso/excel'), 'Download Excel', 'class="btn btn-success"'); ?>
-			<?php //echo anchor(site_url('expedisi/word'), 'Word', 'class="btn btn-primary"'); ?>
+			<?php  echo anchor(site_url('nomor_iso/excel'), 'Download Excel', 'class="btn btn-success"'); ?>
+			<?php echo anchor(site_url('expedisi/word'), 'Word', 'class="btn btn-primary"'); ?>
 			</div>
         </div>
 		
