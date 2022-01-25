@@ -109,7 +109,7 @@ public function data($id)
         'tgl_lahir'  => $this->input->post( 'tgl_lahir',TRUE),
         'nik'  => $this->input->post( 'nik',TRUE),
         'pendidikan' => $this->input->post( 'pendidikan',TRUE),
-        'no_reg' => $this->input->post( 'no_reg',TRUE), ,m.
+        'no_reg' => $this->input->post( 'no_reg',TRUE), 
         'no_sert' => $this->input->post( 'no_sert',TRUE),
         'perusahaan' => $this->input->post( 'perusahaan',TRUE),
         'alamat' => $this->input->post ( 'alamat',TRUE),
