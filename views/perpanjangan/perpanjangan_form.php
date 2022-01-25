@@ -29,7 +29,7 @@
         </div>
 	    <div class="form-group">
             <label for="varchar"> Tanggal Lahir <?php echo form_error('tgl_lahir') ?></label>
-            <input type="text" class="form-control" name="tgl_lahir" id="tgl_lahir" placeholder="Tanggal Lahir" value="<?php echo $tgl_lahir; ?>" />
+            <input type="text" class="form-control tgl_lahir" name="tgl_lahir" id="tgl_lahir" placeholder="Tanggal Lahir" value="<?php echo $tgl_lahir; ?>" />
         </div>
 	    <div class="form-group">
             <label for="varchar">NIK <?php echo form_error('nik') ?></label>
@@ -64,11 +64,11 @@
         </div>
 		<div class="form-group">
             <label for="varchar"> Tgl Surat Permo <?php echo form_error('tgl_surat_permo') ?></label>
-            <input type="text" class="form-control" name="tgl_surat_permo" id="tgl_surat_permo" placeholder="Tgl Surat Permo" value="<?php echo $tgl_surat_permo; ?>" />
+            <input type="text" class="form-control tgl_surat_permo" name="tgl_surat_permo" id="tgl_surat_permo" placeholder="Tgl Surat Permo" value="<?php echo $tgl_surat_permo; ?>" />
         </div>
 		<div class="form-group">
             <label for="varchar"> Tgl Submit <?php echo form_error('tgl_submit') ?></label>
-            <input type="text" class="form-control" name="tgl_submit" id="tgl_submit" placeholder="Tgl Submit" value="<?php echo $tgl_submit; ?>" />
+            <input type="text" class="form-control tgl_submit" name="tgl_submit" id="tgl_submit" placeholder="Tgl Submit" value="<?php echo $tgl_submit; ?>" />
         </div>
 		<div class="form-group">
             <label for="varchar"> No Ptsa <?php echo form_error('no_ptsa') ?></label>
@@ -96,10 +96,28 @@
 
 <script type="text/javascript">
             $(document).ready(function () {
-                $('.tanggal').datepicker({
+                $('.tgl_lahir').datepicker({
                     format: "dd-mm-yyyy",
                     autoclose:true
                 });
             });
-        </script><?php
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.tgl_surat_permo').datepicker({
+                    format: "dd-mm-yyyy",
+                    autoclose:true
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.tgl_submit').datepicker({
+                    format: "dd-mm-yyyy",
+                    autoclose:true
+                });
+            });
+        </script>
+        
+        <?php
 /* http://djagatrayanetwork.com */ ?>

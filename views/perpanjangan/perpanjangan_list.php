@@ -130,5 +130,6 @@ $user = $this->db->query("SELECT * FROM user WHERE id_user='$id'")->row();  ?>
             });
         });
 </script>
+
 <?php
 /*  */ ?>
