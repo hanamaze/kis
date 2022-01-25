@@ -24,11 +24,9 @@
     <option value="INDAH LOGISTIK" <?php if($kurir=="INDAH LOGISTIK"){ echo "selected"; }?>>INDAH LOGISTIK</option>
     <option value="LION" <?php if($kurir=="LION"){ echo "selected"; }?>>LION</option>
     <option value="LAINNYA" <?php if($kurir=="LAINNYA"){ echo "selected"; }?>>LAINNYA</option>
-    
-
-
-			</select>
+        </select>
         </div>
+        
 	    <div class="form-group">
             <label for="varchar">Resi <?php echo form_error('resi') ?></label>
             <input type="text" class="form-control" name="resi" id="resi" placeholder="Resi" value="<?php echo $resi; ?>" />

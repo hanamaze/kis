@@ -25,57 +25,57 @@
         </div>
 	    <div class="form-group">
             <label for="varchar">Tempat Lahir <?php echo form_error('tempat_lahir') ?></label>
-            <input type="text" class="form-control" name="tempat_lahir" id="tempat_lahir" placeholder="Tempat Lahir" value="<?php echo $tempat_lahir; ?>" />
+            <input type="text" class="form-control" name="tempat_lahir" id="tempat_lahir" placeholder="Ex: Jakarta" value="<?php echo $tempat_lahir; ?>" />
         </div>
 	    <div class="form-group">
             <label for="varchar"> Tanggal Lahir <?php echo form_error('tgl_lahir') ?></label>
-            <input type="text" class="form-control tgl_lahir" name="tgl_lahir" id="tgl_lahir" placeholder="Tanggal Lahir" value="<?php echo $tgl_lahir; ?>" />
+            <input type="text" class="form-control tgl_lahir" name="tgl_lahir" id="tgl_lahir" placeholder="Ex: 12/01/2001" value="<?php echo $tgl_lahir; ?>" />
         </div>
 	    <div class="form-group">
-            <label for="varchar">NIK <?php echo form_error('nik') ?></label>
-            <input type="text" class="form-control" name="nik" id="nik" placeholder="NIK" value="<?php echo $nik; ?>" />
+            <label for="varchar">NIK KTP <?php echo form_error('nik') ?></label>
+            <input type="text" class="form-control" name="nik" id="nik" placeholder="Ex: 3321xxxxxxx" value="<?php echo $nik; ?>" />
         </div>
 	    <div class="form-group">
             <label for="varchar">Pendidikan <?php echo form_error('pendidikan') ?></label>
-            <input type="text" class="form-control" name="pendidikan" id="pendidikan" placeholder="Pendidikan" value="<?php echo $pendidikan; ?>" />
+            <input type="text" class="form-control" name="pendidikan" id="pendidikan" placeholder="Ex: SMA,3, S1, S2,dll" value="<?php echo $pendidikan; ?>" />
         </div>
 	    <div class="form-group">
-            <label for="varchar"> No Reg <?php echo form_error('no_reg') ?></label>
-            <input type="text" class="form-control" name="no_reg" id="no_reg" placeholder="No Reg" value="<?php echo $no_reg; ?>" />
+            <label for="varchar"> No Registrasi <?php echo form_error('no_reg') ?></label>
+            <input type="text" class="form-control" name="no_reg" id="no_reg" placeholder="No Registrasi di Se" value="<?php echo $no_reg; ?>" />
         </div>
 	    <div class="form-group">
-            <label for="varchar"> No Sert <?php echo form_error('no_sert') ?></label>
+            <label for="varchar"> No Sertifikat K3 <?php echo form_error('no_sert') ?></label>
             <input type="text" class="form-control" name="no_sert" id="no_sert" placeholder="No Sert" value="<?php echo $no_sert; ?>" />
         </div>
 <div class="alert alert-secondary" role="alert">
   <b>Data Perusahaan </b>
 </div>
 		<div class="form-group">
-            <label for="varchar"> Perusahaan <?php echo form_error('perusahaan') ?></label>
-            <input type="text" class="form-control" name="perusahaan" id="perusahaan" placeholder="Perusahaan" value="<?php echo $perusahaan; ?>" />
+            <label for="varchar"> Nama Perusahaan <?php echo form_error('perusahaan') ?></label>
+            <input type="text" class="form-control" name="perusahaan" id="perusahaan" placeholder="Nama Perusahaan" value="<?php echo $perusahaan; ?>" />
         </div>
 		<div class="form-group">
-            <label for="varchar"> Alamat <?php echo form_error('alamat') ?></label>
-            <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Alamat" value="<?php echo $alamat; ?>" />
+            <label for="varchar"> Alamat Perusahaan <?php echo form_error('alamat') ?></label>
+            <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Alamat Peserta" value="<?php echo $alamat; ?>" />
         </div>
 		<div class="form-group">
-            <label for="varchar"> No Surat Permo <?php echo form_error('no_surat_permo') ?></label>
+            <label for="varchar"> No Surat Permohonan <?php echo form_error('no_surat_permo') ?></label>
             <input type="text" class="form-control" name="no_surat_permo" id="no_surat_permo" placeholder="No Surat Permo" value="<?php echo $no_surat_permo; ?>" />
         </div>
 		<div class="form-group">
-            <label for="varchar"> Tgl Surat Permo <?php echo form_error('tgl_surat_permo') ?></label>
+            <label for="varchar"> Tanggal Surat Permohonan <?php echo form_error('tgl_surat_permo') ?></label>
             <input type="text" class="form-control tgl_surat_permo" name="tgl_surat_permo" id="tgl_surat_permo" placeholder="Tgl Surat Permo" value="<?php echo $tgl_surat_permo; ?>" />
         </div>
 		<div class="form-group">
-            <label for="varchar"> Tgl Submit <?php echo form_error('tgl_submit') ?></label>
+            <label for="varchar"> Tgl Submit Kemnaker  <?php echo form_error('tgl_submit') ?></label>
             <input type="text" class="form-control tgl_submit" name="tgl_submit" id="tgl_submit" placeholder="Tgl Submit" value="<?php echo $tgl_submit; ?>" />
         </div>
 		<div class="form-group">
-            <label for="varchar"> No Ptsa <?php echo form_error('no_ptsa') ?></label>
+            <label for="varchar"> No PTSA ( Pelayanan Terpadu Satu Atap) <?php echo form_error('no_ptsa') ?></label>
             <input type="text" class="form-control" name="no_ptsa" id="no_ptsa" placeholder="No Ptsa" value="<?php echo $no_ptsa; ?>" />
         </div>
 		<div class="form-group">
-            <label for="enum">Status <?php echo form_error('status') ?></label>
+            <label for="enum">Status Pemrosesan <?php echo form_error('status') ?></label>
             <select name="status" class="form-control">
     <option value="input" <?php if($status=="input"){ echo "selected"; }?>>INPUT</option>
     <option value="submit" <?php if($status=="submit"){ echo "selected"; }?>>SUBMIT</option>

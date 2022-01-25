@@ -72,7 +72,9 @@ $user = $this->db->query("SELECT * FROM user WHERE id_user='$id'")->row();  ?>
             <td><?php echo $perpanjangan->status; ?></td>
             
 			<td>
-			<?php if($id=="7" OR $id=="12"){ ?>	 
+		<?php //if($id=="7" OR $id=="12"){ ?>	 
+        <?php if($this->session->userdata('status')=="admin" or $this->session->userdata('status')=="user"){?>	
+
 		<a href="#" class="detail-perpanjangan btn btn-primary" data-id="<?php echo $perpanjangan->id_perpanjangan ?>"><span class=" fa fa-building-o"></span></a>
 		<a href="<?php echo site_url('perpanjangan/update/'.$perpanjangan->id_perpanjangan) ?>" class="btn btn-success"><span class=" fa fa-pencil"></span></a>
 		<a href="<?php echo site_url('perpanjangan/delete/'.$perpanjangan->id_perpanjangan) ?>" class="btn btn-danger" onclick="javasciprt: return confirm('Anda Yakin Ingin Menghapus?');"><span class=" fa fa-trash-o"></span></a>
