@@ -5,7 +5,7 @@ $user = $this->db->query("SELECT * FROM user WHERE id_user='$id'")->row();  ?>
 <!doctype html>
 <html>
     <head>
-        <title>CRUD</title>
+        <title>Perpanjangan</title>
         <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
     </head>
     <body>
@@ -69,7 +69,7 @@ $user = $this->db->query("SELECT * FROM user WHERE id_user='$id'")->row();  ?>
 			<td><?php echo $perpanjangan->nama_peserta."<br><span class='badge bg-light-blue'>".strtoupper($perpanjangan->status)."</span>"; ?></td>
 			<td><?php echo $perpanjangan->perusahaan ?></td>
 			<td><?php echo $perpanjangan->tgl_submit; ?></td>
-            <td><?php echo $perpanjangan->status; ?></td>
+            <td><span class="badge bg-green"><?php echo $perpanjangan->status; ?></span></td>
             
 			<td>
 		<?php //if($id=="7" OR $id=="12"){ ?>	 

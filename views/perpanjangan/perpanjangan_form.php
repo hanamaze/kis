@@ -40,8 +40,9 @@
             <input type="text" class="form-control" name="pendidikan" id="pendidikan" placeholder="Ex: SMA,3, S1, S2,dll" value="<?php echo $pendidikan; ?>" />
         </div>
 	    <div class="form-group">
-            <label for="varchar"> No Registrasi <?php echo form_error('no_reg') ?></label>
-            <input type="text" class="form-control" name="no_reg" id="no_reg" placeholder="No Registrasi di Se" value="<?php echo $no_reg; ?>" />
+            <label for="varchar"> No Registrasi Lisensi <?php echo form_error('no_reg') ?></label>
+            <input type="text" class="form-control" name="no_reg" id="no_reg" placeholder="Ex: 50467/PK3/AJ/32/2018/P0
+" value="<?php echo $no_reg; ?>" />
         </div>
 	    <div class="form-group">
             <label for="varchar"> No Sertifikat K3 <?php echo form_error('no_sert') ?></label>
@@ -64,10 +65,11 @@
         </div>
 		<div class="form-group">
             <label for="varchar"> Tanggal Surat Permohonan <?php echo form_error('tgl_surat_permo') ?></label>
-            <input type="text" class="form-control tgl_surat_permo" name="tgl_surat_permo" id="tgl_surat_permo" placeholder="Tgl Surat Permo" value="<?php echo $tgl_surat_permo; ?>" />
+            <input type="text" class="form-control tgl_surat_permo" name="tgl_surat_permo" id="tgl_surat_permo" placeholder="Ex: 002/ADPJ/II/2021
+" value="<?php echo $tgl_surat_permo; ?>" />
         </div>
 		<div class="form-group">
-            <label for="varchar"> Tgl Submit Kemnaker  <?php echo form_error('tgl_submit') ?></label>
+            <label for="varchar"> Tanggal Submit Kemnaker  <?php echo form_error('tgl_submit') ?></label>
             <input type="text" class="form-control tgl_submit" name="tgl_submit" id="tgl_submit" placeholder="Tgl Submit" value="<?php echo $tgl_submit; ?>" />
         </div>
 		<div class="form-group">

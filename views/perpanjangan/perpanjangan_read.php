@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>CRUD</title>
+        <title>perpanjangan</title>
         <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
 
     </head>
