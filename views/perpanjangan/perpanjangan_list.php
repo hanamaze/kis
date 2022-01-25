@@ -57,6 +57,7 @@ $user = $this->db->query("SELECT * FROM user WHERE id_user='$id'")->row();  ?>
 		<th>Nama Peserta</th>
 		<th>Perusahaan</th>
 		<th>Tgl Perpanjangan</th>
+        <th>Status Proses</th>
 		<th>Action</th>
             </tr></thead><tbody><?php
 			$start = 1;
@@ -67,7 +68,8 @@ $user = $this->db->query("SELECT * FROM user WHERE id_user='$id'")->row();  ?>
 			<td><?php echo $start++ ?></td>
 			<td><?php echo $perpanjangan->nama_peserta."<br><span class='badge bg-light-blue'>".strtoupper($perpanjangan->status)."</span>"; ?></td>
 			<td><?php echo $perpanjangan->perusahaan ?></td>
-			<td><?php echo $perpanjangan->tgl_perpanjangan; ?></td>
+			<td><?php echo $perpanjangan->tgl_submit; ?></td>
+            <td><?php echo $perpanjangan->status; ?></td>
             
 			<td>
 			<?php if($id=="7" OR $id=="12"){ ?>	 
@@ -129,4 +131,4 @@ $user = $this->db->query("SELECT * FROM user WHERE id_user='$id'")->row();  ?>
         });
 </script>
 <?php
-/* http://djagatrayanetwork.com */ ?>
+/*  */ ?>
