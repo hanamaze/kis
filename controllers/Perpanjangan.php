@@ -253,14 +253,14 @@ public function data($id)
 
         $kolomhead = 0;
         xlsWriteLabel($tablehead, $kolomhead++, "No");
-	xlsWriteLabel($tablehead, $kolomhead++, "Id Kategori Pelatihan");
-	xlsWriteLabel($tablehead, $kolomhead++, "Nama Peserta");
-	xlsWriteLabel($tablehead, $kolomhead++, "Tempat Tgl Lahir");
-	xlsWriteLabel($tablehead, $kolomhead++, "Perusahaan");
-	xlsWriteLabel($tablehead, $kolomhead++, "Alamat");
-	xlsWriteLabel($tablehead, $kolomhead++, "Tgl Perpanjangan");
-	xlsWriteLabel($tablehead, $kolomhead++, "Status");
-	xlsWriteLabel($tablehead, $kolomhead++, "Keterangan");
+        xlsWriteLabel($tablehead, $kolomhead++, "Id Kategori Pelatihan");
+        xlsWriteLabel($tablehead, $kolomhead++, "Nama Peserta");
+        xlsWriteLabel($tablehead, $kolomhead++, "Tempat Tgl Lahir");
+        xlsWriteLabel($tablehead, $kolomhead++, "Perusahaan");
+        xlsWriteLabel($tablehead, $kolomhead++, "Alamat");
+        xlsWriteLabel($tablehead, $kolomhead++, "Tgl Perpanjangan");
+        xlsWriteLabel($tablehead, $kolomhead++, "Status");
+        xlsWriteLabel($tablehead, $kolomhead++, "Keterangan");
 
 	foreach ($this->Perpanjangan_model->get_all() as $data) {
             $kolombody = 0;
