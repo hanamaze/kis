@@ -42,6 +42,8 @@ class Kontak extends CI_Controller
             'pagination' => $this->pagination->create_links(),
             'total_rows' => $config['total_rows'],
             'start' => $start,
+            // tambah konten
+            'konten' => 'kontak/kontak_list',
         );
         //$this->load->view('kontak/kontak_list', $data);
         //diganti tampilan
