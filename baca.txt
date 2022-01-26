@@ -1,1 +1,2 @@
 <script type="text/javascript" src="<?php echo base_url()?>assets/date_picker_bootstrap/js/locales/bootstrap-datetimepicker.id.js"charset="UTF-8"></script>
+ADMIN LTE 2.4.2
