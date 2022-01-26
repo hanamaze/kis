@@ -11,7 +11,7 @@
     </head>
     <body>
         <h2 style="margin-top:0px">Penomoran ISO</h2>
-        <table class="table">
+        <table class="table table-striped">
 	    <tr><td>Tgl Issued</td><td><?php echo $tgl_issued; ?></td></tr>
 	    <tr><td>Nama Perusahaan</td><td><?php echo $nama_perusahaan; ?></td></tr>
 	    <tr><td>No Audit</td><td><?php echo $no_audit; ?></td></tr>

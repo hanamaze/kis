@@ -11,7 +11,7 @@
     </head>
     <body>
         <h2 style="margin-top:0px">Penomoran SMK3</h2>
-        <table class="table">
+        <table class="table table-striped">
 	    <tr><td>Nama Perusahaan</td><td><?php echo $nama_perusahaan; ?></td></tr>
 	    <tr><td>No Laporan</td><td><?php echo $no_laporan; ?></td></tr>
 	    <tr><td>No Aplikasi</td><td><?php echo $no_aplikasi; ?></td></tr>

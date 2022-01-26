@@ -11,10 +11,14 @@
         <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
 
     </head>
+<?php
+$kk = $this->db->query("SELECT * FROM pelatihan WHERE id_pelatihan='$id_pelatihan'")->row();
+?>
+	
     <body>
         <h2 style="margin-top:0px">Detail Peserta</h2>
-        <table class="table">
-	    <tr><td>Id Pelatihan</td><td><?php echo $id_pelatihan; ?></td></tr>
+        <table class="table table-striped">
+	    <tr><td>Id Pelatihan</td><td><?php echo $id_pelatihan; ?> - <?php echo md5_decrypt( $kk->nama_pelatihan);?></td></tr>
 	    <tr><td>Nama Peserta</td><td><?php echo md5_decrypt($nama_peserta); ?></td></tr>
 		<tr><td>NIK Peserta</td><td><?php echo md5_decrypt($nik); ?></td></tr>
 	    <tr><td>Tempat Tgl Lahir</td><td><?php echo md5_decrypt($tempat_tgl_lahir); ?></td></tr>

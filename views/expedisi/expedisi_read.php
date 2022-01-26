@@ -7,7 +7,7 @@
 
     </head>
     <body>
-        <table class="table">
+	<table class="table table-striped">
 	    <tr><td>Kepada</td><td><?php echo $kepada; ?></td></tr>
 	    <tr><td>Kurir</td><td><?php echo $kurir; ?></td></tr>
 	    <tr><td>Resi</td><td><?php echo $resi; ?></td></tr>
