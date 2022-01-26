@@ -22,7 +22,7 @@
 	    <tr><td>Tgl Surat Permohonan</td><td><?php echo $tgl_surat_permo; ?></td></tr>
 	    <tr><td>Tanggal Submit</td><td><?php echo $tgl_submit; ?></td></tr>
 		<tr><td>No PTSA</td><td><?php echo $no_ptsa; ?></td></tr>
-		<tr><td>Status</td><td><span class='badge bg-green'><?php echo $status; ?></span></td></tr>
+		<tr><td>Status</td><td><span class='label label-success'><?php echo $status; ?></span></td></tr>
 		<tr><td>Keterangan</td><td><?php echo $keterangan; ?></td></tr>
 	    <tr><td></td><td></td></tr>
 	</table>
