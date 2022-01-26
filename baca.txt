@@ -1,2 +1,15 @@
 <script type="text/javascript" src="<?php echo base_url()?>assets/date_picker_bootstrap/js/locales/bootstrap-datetimepicker.id.js"charset="UTF-8"></script>
 ADMIN LTE 2.4.2
+
+=====tabel trip
+<table class="table table-striped">
+
+
+<?php
+$kk = $this->db->query("SELECT * FROM kategori_pelatihan WHERE id_kategori_pelatihan='$id_kategori_pelatihan'")->row();
+
+?>
+        <h2 style="margin-top:0px"> Detail </h2>
+        <table class="table table-striped">
+	    <tr><td>Id Cat</td><td><?php echo $id_kategori_pelatihan; ?></td></tr>
+		<tr><td>Nama Pelatihan</td><td><?php echo "<strong>".$kk->nama_kategori."</strong>";?></td></tr>
