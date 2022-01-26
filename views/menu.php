@@ -167,6 +167,14 @@
           </a>
         </li>
 
+        <li <?php if($konten == "kontak/kontak_list"){ echo "class='active'"; } ?>>
+          <a href="<?php echo base_url();?>kontak">
+            <i class="fa fa-contact"></i>
+            
+            <span>Kontak</span>
+          </a>
+        </li>
+
       <?php if($this->session->userdata('status') != "cabang"){?>
         <li <?php if($konten == "kategori_pelatihan/kategori_pelatihan_list"){ echo "class='active'"; } ?>>
           <a href="<?php echo base_url();?>kategori_pelatihan">
