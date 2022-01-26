@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
@@ -28,7 +28,10 @@ class Kontak extends CI_Controller
         $config['per_page'] = 10;
         $config['page_query_string'] = TRUE;
         $config['total_rows'] = $this->Kontak_model->total_rows($q);
-        $kontak = $this->Kontak_model->get_limit_data($config['per_page'], $start, $q);
+        
+        //bawaan harvia - page number
+        //$kontak = $this->Kontak_model->get_limit_data($config['per_page'], $start, $q);
+        $kontak = $this->Kontak_model->get_all();
 
         $this->load->library('pagination');
         $this->pagination->initialize($config);
@@ -40,11 +43,19 @@ class Kontak extends CI_Controller
             'total_rows' => $config['total_rows'],
             'start' => $start,
         );
-        $this->load->view('kontak/kontak_list', $data);
+        //$this->load->view('kontak/kontak_list', $data);
+        //diganti tampilan
+        $this->load->view('index', $data);
+
+    
     }
+    
 
     public function read($id) 
     {
+
+        //tambah id
+        $id = $this->input->post('id');
         $row = $this->Kontak_model->get_by_id($id);
         if ($row) {
             $data = array(
@@ -129,7 +140,10 @@ class Kontak extends CI_Controller
 		'alamat_2' => set_value('alamat_2', $row->alamat_2),
 		'ket' => set_value('ket', $row->ket),
 	    );
-            $this->load->view('kontak/kontak_form', $data);
+            //$this->load->view('kontak/kontak_form', $data);
+            //diganti
+            $this->load->view('index', $data);
+
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(site_url('kontak'));

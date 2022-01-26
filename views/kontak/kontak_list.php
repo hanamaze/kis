@@ -1,48 +1,49 @@
 <!doctype html>
 <html>
     <head>
-        <title>harviacode.com - codeigniter crud generator</title>
+        <title>KONTAK</title>
         <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
         <style>
             body{
-                padding: 15px;
+                padding: 0px;
             }
         </style>
     </head>
     <body>
-        <h2 style="margin-top:0px">Kontak List</h2>
-        <div class="row" style="margin-bottom: 10px">
-            <div class="col-md-4">
-                <?php echo anchor(site_url('kontak/create'),'Create', 'class="btn btn-primary"'); ?>
-            </div>
-            <div class="col-md-4 text-center">
-                <div style="margin-top: 8px" id="message">
-                    <?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Expedisi Pop +</h4>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        
+                    </div>
                 </div>
             </div>
-            <div class="col-md-1 text-right">
-            </div>
-            <div class="col-md-3 text-right">
-                <form action="<?php echo site_url('kontak/index'); ?>" class="form-inline" method="get">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="q" value="<?php echo $q; ?>">
-                        <span class="input-group-btn">
-                            <?php 
-                                if ($q <> '')
-                                {
-                                    ?>
-                                    <a href="<?php echo site_url('kontak'); ?>" class="btn btn-default">Reset</a>
-                                    <?php
-                                }
-                            ?>
-                          <button class="btn btn-primary" type="submit">Search</button>
-                        </span>
-                    </div>
-                </form>
-            </div>
         </div>
-        <table class="table table-bordered" style="margin-bottom: 10px">
-            <tr>
+		<!-- Modal END -->
+
+        <!-- BUTTON TAMBAH MODAL - POPUP -->
+		<a href="#" class="create-kontak btn btn-primary">Tambah</a>
+		<div class="box">
+            <div class="box-header">
+              <h3 class="box-title">KONTAK</h3>
+              
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+			<div class="box-body" style="overflow:scroll;">
+        <table id="example2" class="table table-bordered table-striped">
+            <thead>
+			<tr>
+             
                 <th>No</th>
 		<th>Nama Kontak</th>
 		<th>Instansi</th>
@@ -54,7 +55,9 @@
 		<th>Alamat 2</th>
 		<th>Ket</th>
 		<th>Action</th>
-            </tr><?php
+            </tr></thead>
+			<tbody>
+			<?php
             foreach ($kontak_data as $kontak)
             {
                 ?>
@@ -70,28 +73,35 @@
 			<td><?php echo $kontak->alamat_2 ?></td>
 			<td><?php echo $kontak->ket ?></td>
 			<td style="text-align:center" width="200px">
-				<?php 
-				echo anchor(site_url('kontak/read/'.$kontak->id_kontak),'Read'); 
-				echo ' | '; 
-				echo anchor(site_url('kontak/update/'.$kontak->id_kontak),'Update'); 
-				echo ' | '; 
-				echo anchor(site_url('kontak/delete/'.$kontak->id_kontak),'Delete','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
-				?>
+            <a href="#" class="btn btn-primary detail-kontak" data-id="<?php echo $kontak->id_kontak; ?>">
+			<span class="fa fa-list-ul"></span>
+			</a>
+			
+			
+				<?php if($this->session->userdata('status')=="admin" or $this->session->userdata('status')=="hrd"){?>	
+				 <a href="kontak/update/<?php echo $kontak->id_kontak;?>" class="btn btn-success">
+				 <span class="fa fa-pencil"></span>
+				 </a>
+				 <a onclick="javasciprt: return confirm('Yakin Menghapus ?')" href="kontak/delete/<?php echo $kontak->id_kontak;?>" class="btn btn-danger">
+				 <span class="fa fa-trash-o"></span>
+				 </a>
+				<?php } ?>
 			</td>
 		</tr>
                 <?php
             }
             ?>
+			</tbody>
         </table>
-        <div class="row">
+		<div class="row">
             <div class="col-md-6">
-                <a href="#" class="btn btn-primary">Total Record : <?php echo $total_rows ?></a>
-		<?php echo anchor(site_url('kontak/excel'), 'Excel', 'class="btn btn-primary"'); ?>
-		<?php echo anchor(site_url('kontak/word'), 'Word', 'class="btn btn-primary"'); ?>
-	    </div>
-            <div class="col-md-6 text-right">
-                <?php echo $pagination ?>
-            </div>
+			<?php  echo anchor(site_url('kontak/excel'), 'Download Excel', 'class="btn btn-success"'); ?>
+			<?php echo anchor(site_url('kontak/word'), 'Word', 'class="btn btn-primary"'); ?>
+			</div>
         </div>
+		
+		</div>
+		</div>
+		</div>
     </body>
 </html>
