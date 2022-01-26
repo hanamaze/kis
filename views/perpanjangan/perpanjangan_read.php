@@ -6,9 +6,15 @@
 
     </head>
     <body>
+	<?php 
+
+$kk = $this->db->query("SELECT * FROM kategori_pelatihan WHERE id_kategori_pelatihan='$id_kategori_pelatihan'")->row();
+echo "<strong>".$kk->nama_kategori."</strong>";
+
+?>
         <h2 style="margin-top:0px"> Detail</h2>
         <table class="table">
-	    <tr><td>Id Kategori Pelatihan</td><td><?php echo $id_kategori_pelatihan; ?></td></tr>
+	    <tr><td>Id Kategori Pelatihan</td><td><?php echo $nama_pelatihan; ?></td></tr>
 	    <tr><td>Nama Peserta</td><td><?php echo $nama_peserta; ?></td></tr>
 	    <tr><td>Tempat Lahir</td><td><?php echo $tempat_lahir; ?></td></tr>
 		<tr><td>Tanggal Lahir</td><td><?php echo $tgl_lahir; ?></td></tr>
