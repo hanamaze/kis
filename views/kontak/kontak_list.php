@@ -48,11 +48,8 @@
 		<th>Nama Kontak</th>
 		<th>Instansi</th>
 		<th>No Hp1</th>
-		<th>No Hp2</th>
 		<th>Email 1</th>
-		<th>Email 2</th>
 		<th>Alamat 1</th>
-		<th>Alamat 2</th>
 		<th>Ket</th>
 		<th>Action</th>
             </tr></thead>
@@ -66,11 +63,8 @@
 			<td><?php echo $kontak->nama_kontak ?></td>
 			<td><?php echo $kontak->instansi ?></td>
 			<td><?php echo $kontak->no_hp1 ?></td>
-			<td><?php echo $kontak->no_hp2 ?></td>
 			<td><?php echo $kontak->email_1 ?></td>
-			<td><?php echo $kontak->email_2 ?></td>
 			<td><?php echo $kontak->alamat_1 ?></td>
-			<td><?php echo $kontak->alamat_2 ?></td>
 			<td><?php echo $kontak->ket ?></td>
 			<td style="text-align:center" width="200px">
             <a href="#" class="btn btn-primary detail-kontak" data-id="<?php echo $kontak->id_kontak; ?>">
