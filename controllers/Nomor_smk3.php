@@ -127,6 +127,7 @@ class Nomor_smk3 extends CI_Controller
 		'tgl_audit' => set_value('tgl_audit', $row->tgl_audit),
 		'pembawa' => set_value('pembawa', $row->pembawa),
 		'ket' => set_value('ket', $row->ket),
+        //tambah konten
         'konten' => 'nomor_smk3/nomor_smk3_form',
 	    );
             //$this->load->view('nomor_smk3/nomor_smk3_form', $data);

@@ -139,6 +139,9 @@ class Kontak extends CI_Controller
 		'alamat_1' => set_value('alamat_1', $row->alamat_1),
 		'alamat_2' => set_value('alamat_2', $row->alamat_2),
 		'ket' => set_value('ket', $row->ket),
+        //tambah konten
+        'konten' => 'kontak/kontak_form',
+        
 	    );
             //$this->load->view('kontak/kontak_form', $data);
             //diganti
