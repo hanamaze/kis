@@ -10,7 +10,8 @@
         </style>
     </head>
     <body>
-        <h2 style="margin-top:0px">Kontak Read</h2>
+   <h2 >Detail-Kontak</h2>
+        <hr>
         <table class="table table-striped">
 	    <tr><td>Nama Kontak</td><td><?php echo $nama_kontak; ?></td></tr>
 	    <tr><td>Instansi</td><td><?php echo $instansi; ?></td></tr>

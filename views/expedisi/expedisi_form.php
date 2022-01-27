@@ -53,7 +53,7 @@
 			</select>
         </div>
 	    <input type="hidden" name="id_expedisi" value="<?php echo $id_expedisi; ?>" /> 
-	    <button type="submit" class="btn btn-primary"> sIMOAN</button> 
+	    <button type="submit" class="btn btn-primary"> SIMPAN</button> 
 	    <a href="<?php echo site_url('expedisi') ?>" class="btn btn-default">Cancel</a>
 		<?php echo form_close(); ?>
 

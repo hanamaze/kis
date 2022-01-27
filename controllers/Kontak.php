@@ -197,14 +197,14 @@ class Kontak extends CI_Controller
     public function _rules() 
     {
 	$this->form_validation->set_rules('nama_kontak', 'nama kontak', 'trim|required');
-	$this->form_validation->set_rules('instansi', 'instansi', 'trim|required');
+	//$this->form_validation->set_rules('instansi', 'instansi', 'trim|required');
 	$this->form_validation->set_rules('no_hp1', 'no hp1', 'trim|required');
-	$this->form_validation->set_rules('no_hp2', 'no hp2', 'trim|required');
-	$this->form_validation->set_rules('email_1', 'email 1', 'trim|required');
-	$this->form_validation->set_rules('email_2', 'email 2', 'trim|required');
+	//$this->form_validation->set_rules('no_hp2', 'no hp2', 'trim|required');
+	//$this->form_validation->set_rules('email_1', 'email 1', 'trim|required');
+	//$this->form_validation->set_rules('email_2', 'email 2', 'trim|required');
 	$this->form_validation->set_rules('alamat_1', 'alamat 1', 'trim|required');
-	$this->form_validation->set_rules('alamat_2', 'alamat 2', 'trim|required');
-	$this->form_validation->set_rules('ket', 'ket', 'trim|required');
+	//$this->form_validation->set_rules('alamat_2', 'alamat 2', 'trim|required');
+	//$this->form_validation->set_rules('ket', 'ket', 'trim|required');
 
 	$this->form_validation->set_rules('id_kontak', 'id_kontak', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');

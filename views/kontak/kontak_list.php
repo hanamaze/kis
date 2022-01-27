@@ -17,12 +17,12 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Expedisi Pop +</h4>
+                        <h4 class="modal-title text-center " id="myModalLabel">Form Kontak </h4>
                     </div>
                     <div class="modal-body">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-warning btn-lg" data-dismiss="modal">Close</button>
                         
                     </div>
                 </div>
@@ -30,8 +30,12 @@
         </div>
 		<!-- Modal END -->
 
+
+
         <!-- BUTTON TAMBAH MODAL - POPUP -->
 		<a href="#" class="create-kontak btn btn-primary">Tambah</a>
+        </br>
+
 		<div class="box">
             <div class="box-header">
               <h3 class="box-title">KONTAK</h3>
@@ -44,12 +48,12 @@
             <thead>
 			<tr>
              
-                <th>No</th>
-		<th>Nama Kontak</th>
+        <th>No</th>
+		<th>Nama </th>
 		<th>Instansi</th>
-		<th>No Hp1</th>
-		<th>Email 1</th>
-		<th>Alamat 1</th>
+		<th>No HP</th>
+		<th>Email </th>
+		<th>Alamat </th>
 		<th>Ket</th>
 		<th>Action</th>
             </tr></thead>
@@ -59,7 +63,7 @@
             {
                 ?>
                 <tr>
-			<td width="80px"><?php echo ++$start ?></td>
+			<td width="40px"><?php echo ++$start ?></td>
 			<td><?php echo $kontak->nama_kontak ?></td>
 			<td><?php echo $kontak->instansi ?></td>
 			<td><?php echo $kontak->no_hp1 ?></td>

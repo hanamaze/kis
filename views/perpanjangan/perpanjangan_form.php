@@ -7,10 +7,10 @@
             <div class="box-body">
             <div class="box-body" style="overflow:scroll;">
         <?php } ?>
-        <?php echo $id_k; ?>
+        
         <form action="<?php echo $action; ?>" method="post">
 	    <div class="form-group">
-            <label for="int">Id Kategori Pelatihan <?php echo form_error('id_kategori_pelatihan') ?></label>
+            <label for="int">Kategori Pelatihan ( <?php echo $id_k; ?> ) <?php echo form_error('id_kategori_pelatihan') ?></label>
             <select class="form-control" name="id_kategori_pelatihan" >
 			<?php $kategori = $this->db->get("kategori_pelatihan")->result(); 
 			foreach($kategori as $k){
@@ -19,6 +19,9 @@
 			<?php } ?>
 			</select>
         </div>
+<div class="alert alert-warning" role="alert">
+  Biodata Peserta
+</div>
 	    <div class="form-group">
             <label for="varchar">Nama Peserta <?php echo form_error('nama_peserta') ?></label>
             <input type="text" class="form-control" name="nama_peserta" id="nama_peserta" placeholder="Nama Peserta" value="<?php echo $nama_peserta; ?>" />
@@ -39,6 +42,10 @@
             <label for="varchar">Pendidikan <?php echo form_error('pendidikan') ?></label>
             <input type="text" class="form-control" name="pendidikan" id="pendidikan" placeholder="Ex: SMA,3, S1, S2,dll" value="<?php echo $pendidikan; ?>" />
         </div>
+
+<div class="alert alert-warning" role="alert">
+  Data Sertifikat dan Lisensi
+</div>
 	    <div class="form-group">
             <label for="varchar"> No Registrasi Lisensi <?php echo form_error('no_reg') ?></label>
             <input type="text" class="form-control" name="no_reg" id="no_reg" placeholder="Ex: 50467/PK3/AJ/32/2018/P0
@@ -48,9 +55,7 @@
             <label for="varchar"> No Sertifikat K3 <?php echo form_error('no_sert') ?></label>
             <input type="text" class="form-control" name="no_sert" id="no_sert" placeholder="No Sert" value="<?php echo $no_sert; ?>" />
         </div>
-<div class="alert alert-secondary" role="alert">
-  <b>Data Perusahaan </b>
-</div>
+
 		<div class="form-group">
             <label for="varchar"> Nama Perusahaan <?php echo form_error('perusahaan') ?></label>
             <input type="text" class="form-control" name="perusahaan" id="perusahaan" placeholder="Nama Perusahaan" value="<?php echo $perusahaan; ?>" />
@@ -68,6 +73,10 @@
             <input type="text" class="form-control tgl_surat_permo" name="tgl_surat_permo" id="tgl_surat_permo" placeholder="Ex: 002/ADPJ/II/2021
 " value="<?php echo $tgl_surat_permo; ?>" />
         </div>
+
+<div class="alert alert-warning" role="alert">
+  Status & Progress
+</div>
 		<div class="form-group">
             <label for="varchar"> Tanggal Submit Kemnaker  <?php echo form_error('tgl_submit') ?></label>
             <input type="text" class="form-control tgl_submit" name="tgl_submit" id="tgl_submit" placeholder="Tgl Submit" value="<?php echo $tgl_submit; ?>" />
