@@ -42,6 +42,7 @@
 						<i class="zmdi zmdi-chevron-down"></i> </span>
 						
 		<?php 
+		//user salah pass
 			if($this->uri->segment(2)=="wrong"){
 			echo "<center> Cek username & password !!!</center>"; 
           }else{
