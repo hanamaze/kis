@@ -42,16 +42,16 @@
 						<i class="zmdi zmdi-chevron-down"></i> </span>
 						
 		<?php 
-		//user salah pass
+		//jika user salah pass
 			if($this->uri->segment(2)=="wrong"){
 			echo "<center> Cek username & password !!!</center>"; 
           }else{
-          echo "<center> Welcome</center>"; 
+          echo "<center> Welcome again </center>"; 
           }
           ?>
 						
 				
-				
+ 
 				
 					<div class="wrap-input100 validate-input" data-validate = "Valid Username Is ..">
 						<input class="input100" type="text" name="username">
