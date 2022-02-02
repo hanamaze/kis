@@ -94,9 +94,9 @@ class Expedisi extends CI_Controller
         //$config['max_height'] = 1080; // batas tinggi gambar dalam piksel
 		$this->load->library('upload', $config); // Load konfigurasi uploadnya
 
-        // if ($this->form_validation->run() == FALSE) {
-        //     $this->create();
-        // } else {
+        if ($this->form_validation->run() == FALSE) {
+            $this->create();
+        } else {
 
             if (!empty($_FILES['file'] )) {
                 if ( $this->upload->do_upload('file') ) {
@@ -115,7 +115,7 @@ class Expedisi extends CI_Controller
             $this->Expedisi_model->insert($data);
             $this->session->set_flashdata('message', 'Create Record Success');
             redirect(site_url('expedisi'));
-        // }
+        }
 
     } else {    echo "kondisi kedua"   }
 

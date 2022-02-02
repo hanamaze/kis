@@ -15,27 +15,27 @@ class Expedisi_model extends CI_Model
         parent::__construct();
     }
 // Fungsi untuk melakukan proses upload file
-	public function upload(){
-		$config['upload_path'] = './data_expedisi/';
-		$config['allowed_types'] = 'jpg|png|jpeg|doc|docx|xls|xlsx|pdf';
-		$config['max_size']	= '200000';
-       // $config['quality']= '50%';
-		$config['remove_space'] = TRUE;
-        $config['overwrite']=TRUE;
-        config['max_width'] = 1080; // batas lebar gambar dalam piksel
-        $config['max_height'] = 1080; // batas tinggi gambar dalam piksel
+	// public function upload(){
+	// 	$config['upload_path'] = './data_expedisi/';
+	// 	$config['allowed_types'] = 'jpg|png|jpeg|doc|docx|xls|xlsx|pdf';
+	// 	$config['max_size']	= '200000';
+    //    // $config['quality']= '50%';
+	// 	$config['remove_space'] = TRUE;
+    //     $config['overwrite']=TRUE;
+    //     config['max_width'] = 1080; // batas lebar gambar dalam piksel
+    //     $config['max_height'] = 1080; // batas tinggi gambar dalam piksel
 
-		$this->load->library('upload', $config); // Load konfigurasi uploadnya
-		if($this->upload->do_upload('file')){ // Lakukan upload dan Cek jika proses upload berhasil
-			// Jika berhasil :
-			$return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
-			return $return;
-		}else{
-			// Jika gagal :
-			$return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
-			return $return;
-		}
-	}
+	// 	$this->load->library('upload', $config); // Load konfigurasi uploadnya
+	// 	if($this->upload->do_upload('file')){ // Lakukan upload dan Cek jika proses upload berhasil
+	// 		// Jika berhasil :
+	// 		$return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
+	// 		return $return;
+	// 	}else{
+	// 		// Jika gagal :
+	// 		$return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
+	// 		return $return;
+	// 	}
+	// }
     // get all
     function get_all()
     {
