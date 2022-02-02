@@ -5,7 +5,7 @@
             
             <div class="box-body">
             <div class="box-body" style="overflow:scroll;">
-        <?php echo form_open("expedisi/update_action", array('enctype'=>'multipart/form-data')); ?>
+            <form action="<?php echo $action; ?>" method="post">
 	    <div class="form-group">
             <label for="varchar">Kepada <?php echo form_error('kepada') ?></label>
             <input type="text" class="form-control" name="kepada" id="kepada" placeholder="Kepada" value="<?php echo $kepada; ?>" />
