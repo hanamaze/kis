@@ -62,14 +62,14 @@ class Expedisi extends CI_Controller
             redirect(site_url('expedisi'));
         }
     }
-
+/*
     public function create() 
     {
         $data = array(
-    'button' => 'Tambah',
-    'action' => site_url('expedisi/create_action'),
-	'id_expedisi' => set_value('id_expedisi'),
-	   'kepada' => set_value('kepada'),
+            'button' => 'Tambah',
+            'action' => site_url('expedisi/create_action'),
+	    'id_expedisi' => set_value('id_expedisi'),
+	    'kepada' => set_value('kepada'),
 	    'kurir' => set_value('kurir'),
 	    'resi' => set_value('resi'),
 	    'tanggal' => set_value('tanggal'),
@@ -84,25 +84,10 @@ class Expedisi extends CI_Controller
     {
         $this->_rules();
 
-        $config['upload_path'] = './data_expedisi/';
-		$config['allowed_types'] = 'jpg|png|jpeg|doc|docx|xls|xlsx|pdf';
-		$config['max_size']	= '200000';
-       // $config['quality']= '50%';
-		$config['remove_space'] = TRUE;
-        $config['overwrite']=TRUE;
-        //$config['max_width'] = 1080; // batas lebar gambar dalam piksel
-        //$config['max_height'] = 1080; // batas tinggi gambar dalam piksel
-		$this->load->library('upload', $config); // Load konfigurasi uploadnya
-
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {
-
-            if (!empty($_FILES['file'] )) {
-                if ( $this->upload->do_upload('file') ) {
-                    $foto = $this->upload->data();
-
-        $data = array(
+            $data = array(
 		'kepada' => $this->input->post('kepada',TRUE),
 		'kurir' => $this->input->post('kurir',TRUE),
 		'resi' => $this->input->post('resi',TRUE),
@@ -116,32 +101,27 @@ class Expedisi extends CI_Controller
             $this->session->set_flashdata('message', 'Create Record Success');
             redirect(site_url('expedisi'));
         }
-
-    } else {    echo "kondisi kedua"   }
-
     }
-	
-
-
-    // public function tambah(){
-	// 	$data = array();
+	*/
+    public function tambah(){
+		$data = array();
 		
-	// 	if($this->input->post('submit')){ // Jika user menekan tombol Submit (Simpan) pada form
-	// 		// lakukan upload file dengan memanggil function upload yang ada di GambarModel.php
-	// 		$upload = $this->Expedisi_model->upload();
+		if($this->input->post('submit')){ // Jika user menekan tombol Submit (Simpan) pada form
+			// lakukan upload file dengan memanggil function upload yang ada di GambarModel.php
+			$upload = $this->Expedisi_model->upload();
 			
-	// 		if($upload['result'] == "success"){ // Jika proses upload sukses
-	// 			 // Panggil function save yang ada di GambarModel.php untuk menyimpan data ke database
-	// 			$this->Expedisi_model->save($upload);
+			if($upload['result'] == "success"){ // Jika proses upload sukses
+				 // Panggil function save yang ada di GambarModel.php untuk menyimpan data ke database
+				$this->Expedisi_model->save($upload);
 				
-	// 			redirect('expedisi'); // Redirect kembali ke halaman awal / halaman view data
-	// 		}else{ // Jika proses upload gagal
-	// 			$data['message'] = $upload['error']; // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
-	// 		}
-	// 	}
+				redirect('expedisi'); // Redirect kembali ke halaman awal / halaman view data
+			}else{ // Jika proses upload gagal
+				$data['message'] = $upload['error']; // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
+			}
+		}
 		
-	// 	$this->load->view('expedisi/form', $data);
-	// }
+		$this->load->view('expedisi/form', $data);
+	}
 	
     //public function tambah2(){
 	//	$upload = $this->Expedisi_model->upload();
