@@ -80,46 +80,46 @@ class Expedisi extends CI_Controller
         $this->load->view('expedisi/expedisi_form', $data);
     }
     
-    public function create_action() 
-    {
-        $this->_rules();
+    // public function create_action() 
+    // {
+    //     $this->_rules();
 
-        $config['upload_path'] = './data_expedisi/';
-		$config['allowed_types'] = 'jpg|png|jpeg|doc|docx|xls|xlsx|pdf';
-		$config['max_size']	= '200000';
-       // $config['quality']= '50%';
-		$config['remove_space'] = TRUE;
-        $config['overwrite']=TRUE;
-        //$config['max_width'] = 1080; // batas lebar gambar dalam piksel
-        //$config['max_height'] = 1080; // batas tinggi gambar dalam piksel
-		$this->load->library('upload', $config); // Load konfigurasi uploadnya
+    //     $config['upload_path'] = './data_expedisi/';
+	// 	$config['allowed_types'] = 'jpg|png|jpeg|doc|docx|xls|xlsx|pdf';
+	// 	$config['max_size']	= '200000';
+    //    // $config['quality']= '50%';
+	// 	$config['remove_space'] = TRUE;
+    //     $config['overwrite']=TRUE;
+    //     //$config['max_width'] = 1080; // batas lebar gambar dalam piksel
+    //     //$config['max_height'] = 1080; // batas tinggi gambar dalam piksel
+	// 	$this->load->library('upload', $config); // Load konfigurasi uploadnya
 
-        if ($this->form_validation->run() == FALSE) {
-            $this->create();
-        } else {
+    //     if ($this->form_validation->run() == FALSE) {
+    //         $this->create();
+    //     } else {
 
-            if (!empty($_FILES['file'] )) {
-                if ( $this->upload->do_upload('file') ) {
-                    $foto = $this->upload->data();
+    //         if (!empty($_FILES['file'] )) {
+    //             if ( $this->upload->do_upload('file') ) {
+    //                 $foto = $this->upload->data();
 
-        $data = array(
-		'kepada' => $this->input->post('kepada',TRUE),
-		'kurir' => $this->input->post('kurir',TRUE),
-		'resi' => $this->input->post('resi',TRUE),
-		'tanggal' => $this->input->post('tanggal',TRUE),
-		'keterangan' => $this->input->post('keterangan',TRUE),
-		'file' => $this->input->post('file',TRUE),
-		'status' => $this->input->post('status',TRUE),
-	    );
+    //     $data = array(
+	// 	'kepada' => $this->input->post('kepada',TRUE),
+	// 	'kurir' => $this->input->post('kurir',TRUE),
+	// 	'resi' => $this->input->post('resi',TRUE),
+	// 	'tanggal' => $this->input->post('tanggal',TRUE),
+	// 	'keterangan' => $this->input->post('keterangan',TRUE),
+	// 	'file' => $this->input->post('file',TRUE),
+	// 	'status' => $this->input->post('status',TRUE),
+	//     );
 
-            $this->Expedisi_model->insert($data);
-            $this->session->set_flashdata('message', 'Create Record Success');
-            redirect(site_url('expedisi'));
-        }
+    //         $this->Expedisi_model->insert($data);
+    //         $this->session->set_flashdata('message', 'Create Record Success');
+    //         redirect(site_url('expedisi'));
+    //     }
 
-    } else {    echo "kondisi kedua"   }
+    // } else {    echo "kondisi kedua"   }
 
-    }
+    // }
 	
 
 
