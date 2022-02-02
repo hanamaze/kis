@@ -67,7 +67,7 @@ class Expedisi extends CI_Controller
     {
         $data = array(
     'button' => 'Tambah',
-    'action' => site_url('expedisi/create_action'),
+    'action' => site_url('expedisi/inserttv'),
 	'id_expedisi' => set_value('id_expedisi'),
 	   'kepada' => set_value('kepada'),
 	    'kurir' => set_value('kurir'),
@@ -79,6 +79,50 @@ class Expedisi extends CI_Controller
 	);
         $this->load->view('expedisi/expedisi_form', $data);
     }
+
+// untuk memasukan data ke database
+public function inserttv()
+{
+    //$name   = $this->input->post('name');
+    //$alamat = $this->input->post('alamat');
+
+    // get foto
+    $config['upload_path'] = './assets/picture';
+    $config['allowed_types'] = 'jpg|png|jpeg|gif';
+    $config['max_size'] = '2048';  //2MB max
+    $config['max_width'] = '4480'; // pixel
+    $config['max_height'] = '4480'; // pixel
+    $config['file_name'] = $_FILES['fotopost']['name'];
+
+    $this->upload->initialize($config);
+
+      if (!empty($_FILES['file'])) {
+          if ( $this->upload->do_upload('file') ) {
+              $foto = $this->upload->data();
+              $data = array(
+                	'kepada' => $this->input->post('kepada',TRUE),
+                	'kurir' => $this->input->post('kurir',TRUE),
+                	'resi' => $this->input->post('resi',TRUE),
+                	'tanggal' => $this->input->post('tanggal',TRUE),
+                	'keterangan' => $this->input->post('keterangan',TRUE),
+                	'file' => $this->input->post('file',TRUE),
+                	'status' => $this->input->post('status',TRUE),
+                    );
+            
+                        $this->Expedisi_model->insert($data);
+                        $this->session->set_flashdata('message', 'Create Record Success');
+                        redirect(site_url('expedisi'));
+// $this->modelcrud->insert($data);
+//             redirect('');
+          }else {
+            die("gagal upload");
+          }
+      }else {echo "tidak masuk"; }
+
+}
+
+
+    
     
     // public function create_action() 
     // {
