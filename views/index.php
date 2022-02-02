@@ -878,7 +878,7 @@ if($date=="13-08"){
             $(document).on('click','.create-expedisi',function(e){
                 e.preventDefault();
                 $("#myModal").modal('show');
-                $.post('<?php echo base_url('expedisi/create/');?>',
+                $.post('<?php echo base_url('expedisi/tambah/');?>',
                     {id:$(this).attr('data-id')},
                     function(html){
                         $(".modal-body").html(html);

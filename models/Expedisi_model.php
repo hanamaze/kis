@@ -15,27 +15,27 @@ class Expedisi_model extends CI_Model
         parent::__construct();
     }
 // Fungsi untuk melakukan proses upload file
-	// public function upload(){
-	// 	$config['upload_path'] = './data_expedisi/';
-	// 	$config['allowed_types'] = 'jpg|png|jpeg|doc|docx|xls|xlsx|pdf';
-	// 	$config['max_size']	= '200000';
-    //    // $config['quality']= '50%';
-	// 	$config['remove_space'] = TRUE;
-    //     $config['overwrite']=TRUE;
-    //     config['max_width'] = 1080; // batas lebar gambar dalam piksel
-    //     $config['max_height'] = 1080; // batas tinggi gambar dalam piksel
+	public function upload(){
+		$config['upload_path'] = './data_expedisi/';
+		$config['allowed_types'] = 'jpg|png|jpeg|doc|docx|xls|xlsx|pdf';
+		$config['max_size']	= '200000';
+       // $config['quality']= '50%';
+		$config['remove_space'] = TRUE;
+        $config['overwrite']=TRUE;
+        config['max_width'] = 1080; // batas lebar gambar dalam piksel
+        $config['max_height'] = 1080; // batas tinggi gambar dalam piksel
 
-	// 	$this->load->library('upload', $config); // Load konfigurasi uploadnya
-	// 	if($this->upload->do_upload('file')){ // Lakukan upload dan Cek jika proses upload berhasil
-	// 		// Jika berhasil :
-	// 		$return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
-	// 		return $return;
-	// 	}else{
-	// 		// Jika gagal :
-	// 		$return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
-	// 		return $return;
-	// 	}
-	// }
+		$this->load->library('upload', $config); // Load konfigurasi uploadnya
+		if($this->upload->do_upload('file')){ // Lakukan upload dan Cek jika proses upload berhasil
+			// Jika berhasil :
+			$return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');
+			return $return;
+		}else{
+			// Jika gagal :
+			$return = array('result' => 'failed', 'file' => '', 'error' => $this->upload->display_errors());
+			return $return;
+		}
+	}
     // get all
     function get_all()
     {
@@ -65,19 +65,19 @@ class Expedisi_model extends CI_Model
     }
 
     // get data with limit and search
-    // function get_limit_data($limit, $start = 0, $q = NULL) {
-    //     $this->db->order_by($this->id, $this->order);
-    //     $this->db->like('id_expedisi', $q);
-	// $this->db->or_like('kepada', $q);
-	// $this->db->or_like('kurir', $q);
-	// $this->db->or_like('resi', $q);
-	// $this->db->or_like('tanggal', $q);
-	// $this->db->or_like('keterangan', $q);
-	// $this->db->or_like('file', $q);
-	// $this->db->or_like('status', $q);
-	// $this->db->limit($limit, $start);
-    //     return $this->db->get($this->table)->result();
-    // }
+    function get_limit_data($limit, $start = 0, $q = NULL) {
+        $this->db->order_by($this->id, $this->order);
+        $this->db->like('id_expedisi', $q);
+	$this->db->or_like('kepada', $q);
+	$this->db->or_like('kurir', $q);
+	$this->db->or_like('resi', $q);
+	$this->db->or_like('tanggal', $q);
+	$this->db->or_like('keterangan', $q);
+	$this->db->or_like('file', $q);
+	$this->db->or_like('status', $q);
+	$this->db->limit($limit, $start);
+        return $this->db->get($this->table)->result();
+    }
 
     // insert data
     function insert($data)
@@ -99,21 +99,21 @@ class Expedisi_model extends CI_Model
         $this->db->delete($this->table);
     }
 	// Fungsi untuk menyimpan data ke database
-	// public function save(){
-	// $upload = $this->Expedisi_model->upload();
+	public function save(){
+	$upload = $this->Expedisi_model->upload();
 	
-	// $data = array(
-	// 	'kepada' => $this->input->post('kepada',TRUE),
-	// 	'kurir' => $this->input->post('kurir',TRUE),
-	// 	'resi' => $this->input->post('resi',TRUE),
-	// 	'tanggal' => $this->input->post('tanggal',TRUE),
-	// 	'keterangan' => $this->input->post('keterangan',TRUE),
-	// 	'file' => $upload['file']['file_name'],
-	// 	'status' => $this->input->post('status',TRUE),
-	//     );
+	$data = array(
+		'kepada' => $this->input->post('kepada',TRUE),
+		'kurir' => $this->input->post('kurir',TRUE),
+		'resi' => $this->input->post('resi',TRUE),
+		'tanggal' => $this->input->post('tanggal',TRUE),
+		'keterangan' => $this->input->post('keterangan',TRUE),
+		'file' => $upload['file']['file_name'],
+		'status' => $this->input->post('status',TRUE),
+	    );
 		
-	// 	$this->db->insert('expedisi', $data);
-	// }
+		$this->db->insert('expedisi', $data);
+	}
 
 }
 
