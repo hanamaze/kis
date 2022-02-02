@@ -67,7 +67,7 @@ class Expedisi extends CI_Controller
     {
         $data = array(
     'button' => 'Tambah',
-    'action' => site_url('expedisi/inserttv'),
+    'action' => site_url('expedisi/insertexpedisi'),
 	'id_expedisi' => set_value('id_expedisi'),
 	   'kepada' => set_value('kepada'),
 	    'kurir' => set_value('kurir'),
@@ -81,7 +81,7 @@ class Expedisi extends CI_Controller
     }
 
 // untuk memasukan data ke database
-public function inserttv()
+public function insertexpedisi()
 {
     //$name   = $this->input->post('name');
     //$alamat = $this->input->post('alamat');
